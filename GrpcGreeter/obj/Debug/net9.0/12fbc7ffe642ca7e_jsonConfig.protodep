@@ -1,0 +1,2 @@
+obj\Debug\net9.0\Protos/JsonConfig.cs \
+obj\Debug\net9.0\Protos/JsonConfigGrpc.cs: Protos/jsonConfig.proto

@@ -1,0 +1,39 @@
+{
+  "firstName": {
+    "autoPopulate": true,
+    "autoPopulateField": "customerPhone",
+    "pdfSettings": {
+      "isShowInPdf": true,
+      "size": "12pt"
+    },
+    "order": 0
+  },
+ 
+  "address": {
+    "autoPopulate": true,
+    "autoPopulateField": "customerPhone",
+    "pdfSettings": {
+      "isShowInPdf": false,
+      "size": ""
+    },
+    "order": 5
+  },
+  "address__streetAddress": {
+    "autoPopulate": true,
+    "autoPopulateField": "customerPhone",
+    "pdfSettings": {
+      "isShowInPdf": true,
+      "size": "12pt"
+    },
+    "order": 0
+  },
+  "address__city": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "pdfSettings": {
+      "isShowInPdf": true,
+      "size": ""
+    },
+    "order": 1
+  },
+}

@@ -1,0 +1,3085 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "type": "object",
+  "description": "Offer NLPI request version 0.3.0",
+  "properties": {
+    "processIdentificationNo": {
+      "$schema": "https://json-schema.org/draft/2019-09/schema",
+      "description": "Unique identification number of the process",
+      "type": "string",
+      "format": "uuid",
+      "example": "632e56bd-5f23-4d5b-b1ca-d8d9ccda278c"
+    },
+    "timestamp": {
+      "$schema": "https://json-schema.org/draft/2019-09/schema",
+      "description": "Creation date and time",
+      "type": "string",
+      "format": "date-time"
+    },
+    "header": {
+      "$schema": "https://json-schema.org/draft/2019-09/schema",
+      "description": "Standard header informations",
+      "type": "object",
+      "properties": {
+        "recipient": {
+          "description": "Recipient",
+          "type": "object",
+          "properties": {
+            "broker": {
+              "$schema": "https://json-schema.org/draft/2019-09/schema",
+              "type": "object",
+              "name": "BrokerType",
+              "description": "Broker",
+              "properties": {
+                "brokerRegisterNo": {
+                  "description": "Register number of the broker. Register number for the independent intermediaries as defined by the IG B2B ; prefix with country code and register plus register number FINMA or FMA (example: CHE-FINMA-10001). Note for insurers: For those intermediaries who are not at FINMA or FMA but want to participate on electronic data exchange, e.g., in-house brokers, the code assigned by IG B2B (example: CHE-IGB2B-50001) must be recorded.",
+                  "$schema": "https://json-schema.org/draft/2019-09/schema",
+                  "type": "string",
+                  "maxLength": 19,
+                  "pattern": "^(CHE\\-(FINMA\\-(\\d{5}|\\S{9})|IGB\\dB\\-(\\d{5}))|LIE\\-FMA\\-\\S{5})$"
+                },
+                "companyId": {
+                  "description": "Unique company identification number (UID) for companies based in Switzerland or EU member states as specified in the UID register of the respective authority.",
+                  "$schema": "https://json-schema.org/draft/2019-09/schema",
+                  "name": "CompanyIdType",
+                  "type": "string",
+                  "maxLength": 15,
+                  "pattern": "(CHE|BE|BG|DK|DE|EE|FI|FR|EL|IE|IT|HR|LV|LT|LU|MT|NL|XI|AT|PL|PT|RO|SE|SK|SI|ES|CZ|HU|CY).{2,12}",
+                  "example": "CHE-115.517.011"
+                },
+                "companyName": {
+                  "description": "Company name. For a sole proprietorship, name and surname must be entered.",
+                  "$schema": "https://json-schema.org/draft/2019-09/schema",
+                  "name": "CompanyNameType",
+                  "type": "string",
+                  "maxLength": 255,
+                  "example": "MyCompany Name"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "brokerRegisterNo",
+                "companyName"
+              ]
+            },
+            "insurer": {
+              "$schema": "https://json-schema.org/draft/2019-09/schema",
+              "type": "object",
+              "description": "Insurer",
+              "properties": {
+                "companyId": {
+                  "description": "Unique company identification number (UID) for companies based in Switzerland or EU member states as specified in the UID register of the respective authority.",
+                  "$schema": "https://json-schema.org/draft/2019-09/schema",
+                  "name": "CompanyIdType",
+                  "type": "string",
+                  "maxLength": 15,
+                  "pattern": "(CHE|BE|BG|DK|DE|EE|FI|FR|EL|IE|IT|HR|LV|LT|LU|MT|NL|XI|AT|PL|PT|RO|SE|SK|SI|ES|CZ|HU|CY).{2,12}",
+                  "example": "CHE-115.517.011"
+                },
+                "companyName": {
+                  "description": "Company name. For a sole proprietorship, name and surname must be entered.",
+                  "$schema": "https://json-schema.org/draft/2019-09/schema",
+                  "name": "CompanyNameType",
+                  "type": "string",
+                  "maxLength": 255,
+                  "example": "MyCompany Name"
+                },
+                "insurerCode": {
+                  "description": "Insurer code",
+                  "$schema": "https://json-schema.org/draft/2019-09/schema",
+                  "maxLength": 5,
+                  "pattern": "^([\\w\\D]*[\\w\\D][\\w\\D]*)$",
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "companyName",
+                "insurerCode"
+              ]
+            },
+            "otherExchangePartner": {
+              "$schema": "https://json-schema.org/draft/2019-09/schema",
+              "type": "object",
+              "description": "Other partner for data exchange",
+              "properties": {
+                "companyId": {
+                  "description": "Unique company identification number (UID) for companies based in Switzerland or EU member states as specified in the UID register of the respective authority.",
+                  "$schema": "https://json-schema.org/draft/2019-09/schema",
+                  "name": "CompanyIdType",
+                  "type": "string",
+                  "maxLength": 15,
+                  "pattern": "(CHE|BE|BG|DK|DE|EE|FI|FR|EL|IE|IT|HR|LV|LT|LU|MT|NL|XI|AT|PL|PT|RO|SE|SK|SI|ES|CZ|HU|CY).{2,12}",
+                  "example": "CHE-115.517.011"
+                },
+                "companyName": {
+                  "description": "Company name. For a sole proprietorship, name and surname must be entered.",
+                  "$schema": "https://json-schema.org/draft/2019-09/schema",
+                  "name": "CompanyNameType",
+                  "type": "string",
+                  "maxLength": 255,
+                  "example": "MyCompany Name"
+                },
+                "digitalPartnerId": {
+                  "type": "string",
+                  "format": "uuid",
+                  "example": "632e56bd-5f23-4d5b-b1ca-d8d9ccda278c",
+                  "description": "Unique identification number of the digital partner"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "companyName",
+                "digitalPartnerId"
+              ]
+            }
+          },
+          "additionalProperties": false,
+          "oneOf": [
+            {
+              "required": [
+                "broker"
+              ]
+            },
+            {
+              "required": [
+                "insurer"
+              ]
+            },
+            {
+              "required": [
+                "otherExchangePartner"
+              ]
+            }
+          ]
+        },
+        "sender": {
+          "type": "object",
+          "description": "Sender",
+          "properties": {
+            "broker": {
+              "$schema": "https://json-schema.org/draft/2019-09/schema",
+              "type": "object",
+              "name": "BrokerType",
+              "description": "Broker",
+              "properties": {
+                "brokerRegisterNo": {
+                  "description": "Register number of the broker. Register number for the independent intermediaries as defined by the IG B2B ; prefix with country code and register plus register number FINMA or FMA (example: CHE-FINMA-10001). Note for insurers: For those intermediaries who are not at FINMA or FMA but want to participate on electronic data exchange, e.g., in-house brokers, the code assigned by IG B2B (example: CHE-IGB2B-50001) must be recorded.",
+                  "$schema": "https://json-schema.org/draft/2019-09/schema",
+                  "type": "string",
+                  "maxLength": 19,
+                  "pattern": "^(CHE\\-(FINMA\\-(\\d{5}|\\S{9})|IGB\\dB\\-(\\d{5}))|LIE\\-FMA\\-\\S{5})$"
+                },
+                "companyId": {
+                  "description": "Unique company identification number (UID) for companies based in Switzerland or EU member states as specified in the UID register of the respective authority.",
+                  "$schema": "https://json-schema.org/draft/2019-09/schema",
+                  "name": "CompanyIdType",
+                  "type": "string",
+                  "maxLength": 15,
+                  "pattern": "(CHE|BE|BG|DK|DE|EE|FI|FR|EL|IE|IT|HR|LV|LT|LU|MT|NL|XI|AT|PL|PT|RO|SE|SK|SI|ES|CZ|HU|CY).{2,12}",
+                  "example": "CHE-115.517.011"
+                },
+                "companyName": {
+                  "description": "Company name. For a sole proprietorship, name and surname must be entered.",
+                  "$schema": "https://json-schema.org/draft/2019-09/schema",
+                  "name": "CompanyNameType",
+                  "type": "string",
+                  "maxLength": 255,
+                  "example": "MyCompany Name"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "brokerRegisterNo",
+                "companyName"
+              ]
+            },
+            "insurer": {
+              "$schema": "https://json-schema.org/draft/2019-09/schema",
+              "type": "object",
+              "description": "Insurer",
+              "properties": {
+                "companyId": {
+                  "description": "Unique company identification number (UID) for companies based in Switzerland or EU member states as specified in the UID register of the respective authority.",
+                  "$schema": "https://json-schema.org/draft/2019-09/schema",
+                  "name": "CompanyIdType",
+                  "type": "string",
+                  "maxLength": 15,
+                  "pattern": "(CHE|BE|BG|DK|DE|EE|FI|FR|EL|IE|IT|HR|LV|LT|LU|MT|NL|XI|AT|PL|PT|RO|SE|SK|SI|ES|CZ|HU|CY).{2,12}",
+                  "example": "CHE-115.517.011"
+                },
+                "companyName": {
+                  "description": "Company name. For a sole proprietorship, name and surname must be entered.",
+                  "$schema": "https://json-schema.org/draft/2019-09/schema",
+                  "name": "CompanyNameType",
+                  "type": "string",
+                  "maxLength": 255,
+                  "example": "MyCompany Name"
+                },
+                "insurerCode": {
+                  "description": "Insurer code",
+                  "$schema": "https://json-schema.org/draft/2019-09/schema",
+                  "maxLength": 5,
+                  "pattern": "^([\\w\\D]*[\\w\\D][\\w\\D]*)$",
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "companyName",
+                "insurerCode"
+              ]
+            },
+            "otherExchangePartner": {
+              "$schema": "https://json-schema.org/draft/2019-09/schema",
+              "type": "object",
+              "description": "Other partner for data exchange",
+              "properties": {
+                "companyId": {
+                  "description": "Unique company identification number (UID) for companies based in Switzerland or EU member states as specified in the UID register of the respective authority.",
+                  "$schema": "https://json-schema.org/draft/2019-09/schema",
+                  "name": "CompanyIdType",
+                  "type": "string",
+                  "maxLength": 15,
+                  "pattern": "(CHE|BE|BG|DK|DE|EE|FI|FR|EL|IE|IT|HR|LV|LT|LU|MT|NL|XI|AT|PL|PT|RO|SE|SK|SI|ES|CZ|HU|CY).{2,12}",
+                  "example": "CHE-115.517.011"
+                },
+                "companyName": {
+                  "description": "Company name. For a sole proprietorship, name and surname must be entered.",
+                  "$schema": "https://json-schema.org/draft/2019-09/schema",
+                  "name": "CompanyNameType",
+                  "type": "string",
+                  "maxLength": 255,
+                  "example": "MyCompany Name"
+                },
+                "digitalPartnerId": {
+                  "type": "string",
+                  "format": "uuid",
+                  "example": "632e56bd-5f23-4d5b-b1ca-d8d9ccda278c",
+                  "description": "Unique identification number of the digital partner"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "companyName",
+                "digitalPartnerId"
+              ]
+            }
+          },
+          "additionalProperties": false,
+          "oneOf": [
+            {
+              "required": [
+                "broker"
+              ]
+            },
+            {
+              "required": [
+                "insurer"
+              ]
+            },
+            {
+              "required": [
+                "otherExchangePartner"
+              ]
+            }
+          ]
+        },
+        "standard": {
+          "type": "string",
+          "description": "the URI should contain the Standard, type, subtype and version of the json document",
+          "minLength": 1,
+          "format": "uri-reference",
+          "examples": [
+            "http://www.igb2b.ch/offer/nlpi/request/0.2.0",
+            "http://www.igb2b.ch/offer/nlpi/offer/0.2.0",
+            "http://www.igb2b.ch/offer/nlpi/feedback/0.2.0",
+            "http://www.igb2b.ch/offer/nlpi/conclusiondecision/0.2.0"
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "sender",
+        "recipient",
+        "standard"
+      ]
+    },
+    "customer": {
+      "$schema": "https://json-schema.org/draft/2019-09/schema",
+      "description": "Customer",
+      "type": "object",
+      "properties": {
+        "companyName": {
+          "$schema": "https://json-schema.org/draft/2019-09/schema",
+          "description": "Company name",
+          "name": "CompanyNameType",
+          "type": "string",
+          "maxLength": 255,
+          "example": "MyCompany Name"
+        },
+        "companyId": {
+          "$schema": "https://json-schema.org/draft/2019-09/schema",
+          "description": "Company identification number (UID)",
+          "name": "CompanyIdType",
+          "type": "string",
+          "maxLength": 15,
+          "pattern": "(CHE|BE|BG|DK|DE|EE|FI|FR|EL|IE|IT|HR|LV|LT|LU|MT|NL|XI|AT|PL|PT|RO|SE|SK|SI|ES|CZ|HU|CY).{2,12}",
+          "example": "CHE-115.517.011"
+        },
+        "companyLegalForm": {
+          "$schema": "https://json-schema.org/draft/2019-09/schema",
+          "description": "Legal form of the company",
+          "name": "CompanyLegalFormType",
+          "type": "string",
+          "enum": [
+            "Incorporated company",
+            "Sole proprietorship",
+            "Simple partnership",
+            "Cooperative",
+            "Limited liability company",
+            "General partnership",
+            "Limited partnership",
+            "Limited commercial partnership",
+            "Corporation under public law",
+            "Association",
+            "Foundation"
+          ],
+          "example": "Foundation"
+        },
+        "companyLegalStatus": {
+          "$schema": "https://json-schema.org/draft/2019-09/schema",
+          "description": "Status of the company in terms of legal form",
+          "name": "CompanyLegalStatusType",
+          "type": "string",
+          "enum": [
+            "in Foundation (with entry in the commercial register)",
+            "in Foundation (without entry in the commercial register)",
+            "change of ownership",
+            "active",
+            "in Liquidation",
+            "liquidated"
+          ],
+          "example": "activ"
+        },
+        "localityDomicil": {
+          "description": "Domicil Address Type",
+          "$schema": "https://json-schema.org/draft/2019-09/schema",
+          "name": "LocalityDomicilType",
+          "type": "object",
+          "properties": {
+            "streetName": {
+              "description": "Street name",
+              "type": "string",
+              "maxLength": 100
+            },
+            "houseNumber": {
+              "description": "House number",
+              "type": "string",
+              "maxLength": 10
+            },
+            "adressExtension": {
+              "description": "Additional address information",
+              "type": "string",
+              "maxLength": 100
+            },
+            "postOfficeBox": {
+              "description": "Post office box",
+              "type": "string",
+              "maxLength": 20
+            },
+            "zip": {
+              "description": "International zip code",
+              "type": "string",
+              "maxLength": 10,
+              "pattern": "[A-Z0-9]{1}[A-Z0-9 ]{0,7}[A-Z0-9]{2}",
+              "example": 8001
+            },
+            "city": {
+              "description": "City",
+              "type": "string",
+              "maxLength": 100
+            },
+            "country": {
+              "$schema": "https://json-schema.org/draft/2019-09/schema",
+              "name": "CountryISOCodeType",
+              "description": "Country codes (ISO 3166-1)",
+              "type": "string",
+              "enum": [
+                "AD",
+                "AE",
+                "AF",
+                "AG",
+                "AI",
+                "AL",
+                "AM",
+                "AN",
+                "AO",
+                "AQ",
+                "AR",
+                "AS",
+                "AT",
+                "AU",
+                "AW",
+                "AX",
+                "AZ",
+                "BA",
+                "BB",
+                "BD",
+                "BE",
+                "BF",
+                "BG",
+                "BH",
+                "BI",
+                "BJ",
+                "BL",
+                "BM",
+                "BN",
+                "BO",
+                "BQ",
+                "BR",
+                "BS",
+                "BT",
+                "BV",
+                "BW",
+                "BY",
+                "BZ",
+                "CA",
+                "CC",
+                "CD",
+                "CF",
+                "CG",
+                "CH",
+                "CI",
+                "CK",
+                "CL",
+                "CM",
+                "CN",
+                "CO",
+                "CR",
+                "CU",
+                "CV",
+                "CW",
+                "CX",
+                "CY",
+                "CZ",
+                "DE",
+                "DJ",
+                "DK",
+                "DM",
+                "DO",
+                "DZ",
+                "EC",
+                "EE",
+                "EG",
+                "EH",
+                "ER",
+                "ES",
+                "ET",
+                "FI",
+                "FJ",
+                "FK",
+                "FM",
+                "FO",
+                "FR",
+                "GA",
+                "GB",
+                "GD",
+                "GE",
+                "GF",
+                "GG",
+                "GH",
+                "GI",
+                "GL",
+                "GM",
+                "GN",
+                "GP",
+                "GQ",
+                "GR",
+                "GS",
+                "GT",
+                "GU",
+                "GW",
+                "GY",
+                "HK",
+                "HM",
+                "HN",
+                "HR",
+                "HT",
+                "HU",
+                "ID",
+                "IE",
+                "IL",
+                "IM",
+                "IN",
+                "IO",
+                "IQ",
+                "IR",
+                "IS",
+                "IT",
+                "JE",
+                "JM",
+                "JO",
+                "JP",
+                "KE",
+                "KG",
+                "KH",
+                "KI",
+                "KM",
+                "KN",
+                "KP",
+                "KR",
+                "KW",
+                "KY",
+                "KZ",
+                "LA",
+                "LB",
+                "LC",
+                "LI",
+                "LK",
+                "LR",
+                "LS",
+                "LT",
+                "LU",
+                "LV",
+                "LY",
+                "MA",
+                "MC",
+                "MD",
+                "ME",
+                "MF",
+                "MG",
+                "MH",
+                "MK",
+                "ML",
+                "MM",
+                "MN",
+                "MO",
+                "MP",
+                "MQ",
+                "MR",
+                "MS",
+                "MT",
+                "MU",
+                "MV",
+                "MW",
+                "MX",
+                "MY",
+                "MZ",
+                "NA",
+                "NC",
+                "NE",
+                "NF",
+                "NG",
+                "NI",
+                "NL",
+                "NO",
+                "NP",
+                "NR",
+                "NU",
+                "NZ",
+                "OM",
+                "PA",
+                "PE",
+                "PF",
+                "PG",
+                "PH",
+                "PK",
+                "PL",
+                "PM",
+                "PN",
+                "PR",
+                "PS",
+                "PT",
+                "PW",
+                "PY",
+                "QA",
+                "RE",
+                "RO",
+                "RS",
+                "RU",
+                "RW",
+                "SA",
+                "SB",
+                "SC",
+                "SD",
+                "SE",
+                "SG",
+                "SH",
+                "SI",
+                "SJ",
+                "SK",
+                "SL",
+                "SM",
+                "SN",
+                "SO",
+                "SR",
+                "SS",
+                "ST",
+                "SV",
+                "SX",
+                "SY",
+                "SZ",
+                "TC",
+                "TD",
+                "TF",
+                "TG",
+                "TH",
+                "TJ",
+                "TK",
+                "TL",
+                "TM",
+                "TN",
+                "TO",
+                "TR",
+                "TT",
+                "TV",
+                "TW",
+                "TZ",
+                "UA",
+                "UG",
+                "UM",
+                "US",
+                "UY",
+                "UZ",
+                "VA",
+                "VC",
+                "VE",
+                "VG",
+                "VI",
+                "VN",
+                "VU",
+                "WF",
+                "WS",
+                "YE",
+                "YT",
+                "ZA",
+                "ZM",
+                "ZW"
+              ],
+              "example": "CH"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "streetName",
+            "houseNumber",
+            "zip",
+            "city",
+            "country"
+          ]
+        },
+        "isDomicilLocalityCorrespondenceAddress": {
+          "type": "boolean"
+        },
+        "localityCorrespondence": {
+          "description": "Correspondence Address Type",
+          "$schema": "https://json-schema.org/draft/2019-09/schema",
+          "name": "LocalityDomicilType",
+          "type": "object",
+          "properties": {
+            "streetName": {
+              "description": "Street name",
+              "type": "string",
+              "maxLength": 100
+            },
+            "houseNumber": {
+              "description": "House number",
+              "type": "string",
+              "maxLength": 10
+            },
+            "adressExtension": {
+              "description": "Additional address information",
+              "type": "string",
+              "maxLength": 100
+            },
+            "postOfficeBox": {
+              "description": "Post office box",
+              "type": "string",
+              "maxLength": 20
+            },
+            "zip": {
+              "description": "International zip code",
+              "type": "string",
+              "maxLength": 10,
+              "pattern": "[A-Z0-9]{1}[A-Z0-9 ]{0,7}[A-Z0-9]{2}",
+              "example": 8001
+            },
+            "city": {
+              "description": "City",
+              "type": "string",
+              "maxLength": 100
+            },
+            "country": {
+              "$schema": "https://json-schema.org/draft/2019-09/schema",
+              "name": "CountryISOCodeType",
+              "description": "Country codes (ISO 3166-1)",
+              "type": "string",
+              "enum": [
+                "AD",
+                "AE",
+                "AF",
+                "AG",
+                "AI",
+                "AL",
+                "AM",
+                "AN",
+                "AO",
+                "AQ",
+                "AR",
+                "AS",
+                "AT",
+                "AU",
+                "AW",
+                "AX",
+                "AZ",
+                "BA",
+                "BB",
+                "BD",
+                "BE",
+                "BF",
+                "BG",
+                "BH",
+                "BI",
+                "BJ",
+                "BL",
+                "BM",
+                "BN",
+                "BO",
+                "BQ",
+                "BR",
+                "BS",
+                "BT",
+                "BV",
+                "BW",
+                "BY",
+                "BZ",
+                "CA",
+                "CC",
+                "CD",
+                "CF",
+                "CG",
+                "CH",
+                "CI",
+                "CK",
+                "CL",
+                "CM",
+                "CN",
+                "CO",
+                "CR",
+                "CU",
+                "CV",
+                "CW",
+                "CX",
+                "CY",
+                "CZ",
+                "DE",
+                "DJ",
+                "DK",
+                "DM",
+                "DO",
+                "DZ",
+                "EC",
+                "EE",
+                "EG",
+                "EH",
+                "ER",
+                "ES",
+                "ET",
+                "FI",
+                "FJ",
+                "FK",
+                "FM",
+                "FO",
+                "FR",
+                "GA",
+                "GB",
+                "GD",
+                "GE",
+                "GF",
+                "GG",
+                "GH",
+                "GI",
+                "GL",
+                "GM",
+                "GN",
+                "GP",
+                "GQ",
+                "GR",
+                "GS",
+                "GT",
+                "GU",
+                "GW",
+                "GY",
+                "HK",
+                "HM",
+                "HN",
+                "HR",
+                "HT",
+                "HU",
+                "ID",
+                "IE",
+                "IL",
+                "IM",
+                "IN",
+                "IO",
+                "IQ",
+                "IR",
+                "IS",
+                "IT",
+                "JE",
+                "JM",
+                "JO",
+                "JP",
+                "KE",
+                "KG",
+                "KH",
+                "KI",
+                "KM",
+                "KN",
+                "KP",
+                "KR",
+                "KW",
+                "KY",
+                "KZ",
+                "LA",
+                "LB",
+                "LC",
+                "LI",
+                "LK",
+                "LR",
+                "LS",
+                "LT",
+                "LU",
+                "LV",
+                "LY",
+                "MA",
+                "MC",
+                "MD",
+                "ME",
+                "MF",
+                "MG",
+                "MH",
+                "MK",
+                "ML",
+                "MM",
+                "MN",
+                "MO",
+                "MP",
+                "MQ",
+                "MR",
+                "MS",
+                "MT",
+                "MU",
+                "MV",
+                "MW",
+                "MX",
+                "MY",
+                "MZ",
+                "NA",
+                "NC",
+                "NE",
+                "NF",
+                "NG",
+                "NI",
+                "NL",
+                "NO",
+                "NP",
+                "NR",
+                "NU",
+                "NZ",
+                "OM",
+                "PA",
+                "PE",
+                "PF",
+                "PG",
+                "PH",
+                "PK",
+                "PL",
+                "PM",
+                "PN",
+                "PR",
+                "PS",
+                "PT",
+                "PW",
+                "PY",
+                "QA",
+                "RE",
+                "RO",
+                "RS",
+                "RU",
+                "RW",
+                "SA",
+                "SB",
+                "SC",
+                "SD",
+                "SE",
+                "SG",
+                "SH",
+                "SI",
+                "SJ",
+                "SK",
+                "SL",
+                "SM",
+                "SN",
+                "SO",
+                "SR",
+                "SS",
+                "ST",
+                "SV",
+                "SX",
+                "SY",
+                "SZ",
+                "TC",
+                "TD",
+                "TF",
+                "TG",
+                "TH",
+                "TJ",
+                "TK",
+                "TL",
+                "TM",
+                "TN",
+                "TO",
+                "TR",
+                "TT",
+                "TV",
+                "TW",
+                "TZ",
+                "UA",
+                "UG",
+                "UM",
+                "US",
+                "UY",
+                "UZ",
+                "VA",
+                "VC",
+                "VE",
+                "VG",
+                "VI",
+                "VN",
+                "VU",
+                "WF",
+                "WS",
+                "YE",
+                "YT",
+                "ZA",
+                "ZM",
+                "ZW"
+              ],
+              "example": "CH"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "zip",
+            "city",
+            "country"
+          ]
+        },
+        "GAVcompliance": {
+          "description": "Guaranteed compliance with the GAV-conformity",
+          "$schema": "https://json-schema.org/draft/2019-09/schema",
+          "type": "string",
+          "enum": [
+            "Yes",
+            "No",
+            "Unknown"
+          ]
+        },
+        "GAVname": {
+          "description": "GAV-Designation",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "description": "GAV-Designation(s)",
+            "type": "string"
+          }
+        },
+        "NOGACodeMain": {
+          "description": "Main NOGA-Code",
+          "$schema": "https://json-schema.org/draft/2019-09/schema",
+          "type": "object",
+          "properties": {
+            "NOGAsection": {
+              "description": "Section the NOGA code belongs to",
+              "type": "string"
+            },
+            "NOGAcode": {
+              "description": "NOGA Code, is a 6 digit string identifier",
+              "type": "string",
+              "maxLength": 6
+            },
+            "NOGAname": {
+              "description": "Corresponding name for the NOGA code",
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "NOGACodeAdditional": {
+          "description": "Additional NOGA-Code activities",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$schema": "https://json-schema.org/draft/2019-09/schema",
+            "type": "object",
+            "properties": {
+              "NOGAsection": {
+                "description": "Section the NOGA code belongs to",
+                "type": "string"
+              },
+              "NOGAcode": {
+                "description": "NOGA Code, is a 6 digit string identifier",
+                "type": "string",
+                "maxLength": 6
+              },
+              "NOGAname": {
+                "description": "Corresponding name for the NOGA code",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "companyName",
+        "companyLegalForm",
+        "localityDomicil",
+        "isDomicilLocalityCorrespondenceAddress",
+        "GAVcompliance"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "isDomicilLocalityCorrespondenceAddress": {
+                "const": false
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "localityCorrespondence"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "GAVcompliance": {
+                "const": "Yes"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "GAVname"
+            ]
+          }
+        }
+      ]
+    },
+    "coInsuredCustomer": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$schema": "https://json-schema.org/draft/2019-09/schema",
+        "description": "Customer",
+        "type": "object",
+        "properties": {
+          "companyName": {
+            "$schema": "https://json-schema.org/draft/2019-09/schema",
+            "description": "Company name",
+            "name": "CompanyNameType",
+            "type": "string",
+            "maxLength": 255,
+            "example": "MyCompany Name"
+          },
+          "companyId": {
+            "$schema": "https://json-schema.org/draft/2019-09/schema",
+            "description": "Company identification number (UID)",
+            "name": "CompanyIdType",
+            "type": "string",
+            "maxLength": 15,
+            "pattern": "(CHE|BE|BG|DK|DE|EE|FI|FR|EL|IE|IT|HR|LV|LT|LU|MT|NL|XI|AT|PL|PT|RO|SE|SK|SI|ES|CZ|HU|CY).{2,12}",
+            "example": "CHE-115.517.011"
+          },
+          "companyLegalForm": {
+            "$schema": "https://json-schema.org/draft/2019-09/schema",
+            "description": "Legal form of the company",
+            "name": "CompanyLegalFormType",
+            "type": "string",
+            "enum": [
+              "Incorporated company",
+              "Sole proprietorship",
+              "Simple partnership",
+              "Cooperative",
+              "Limited liability company",
+              "General partnership",
+              "Limited partnership",
+              "Limited commercial partnership",
+              "Corporation under public law",
+              "Association",
+              "Foundation"
+            ],
+            "example": "Foundation"
+          },
+          "companyLegalStatus": {
+            "$schema": "https://json-schema.org/draft/2019-09/schema",
+            "description": "Status of the company in terms of legal form",
+            "name": "CompanyLegalStatusType",
+            "type": "string",
+            "enum": [
+              "in Foundation (with entry in the commercial register)",
+              "in Foundation (without entry in the commercial register)",
+              "change of ownership",
+              "active",
+              "in Liquidation",
+              "liquidated"
+            ],
+            "example": "activ"
+          },
+          "localityDomicil": {
+            "description": "Domicil Address Type",
+            "$schema": "https://json-schema.org/draft/2019-09/schema",
+            "name": "LocalityDomicilType",
+            "type": "object",
+            "properties": {
+              "streetName": {
+                "description": "Street name",
+                "type": "string",
+                "maxLength": 100
+              },
+              "houseNumber": {
+                "description": "House number",
+                "type": "string",
+                "maxLength": 10
+              },
+              "adressExtension": {
+                "description": "Additional address information",
+                "type": "string",
+                "maxLength": 100
+              },
+              "postOfficeBox": {
+                "description": "Post office box",
+                "type": "string",
+                "maxLength": 20
+              },
+              "zip": {
+                "description": "International zip code",
+                "type": "string",
+                "maxLength": 10,
+                "pattern": "[A-Z0-9]{1}[A-Z0-9 ]{0,7}[A-Z0-9]{2}",
+                "example": 8001
+              },
+              "city": {
+                "description": "City",
+                "type": "string",
+                "maxLength": 100
+              },
+              "country": {
+                "$schema": "https://json-schema.org/draft/2019-09/schema",
+                "name": "CountryISOCodeType",
+                "description": "Country codes (ISO 3166-1)",
+                "type": "string",
+                "enum": [
+                  "AD",
+                  "AE",
+                  "AF",
+                  "AG",
+                  "AI",
+                  "AL",
+                  "AM",
+                  "AN",
+                  "AO",
+                  "AQ",
+                  "AR",
+                  "AS",
+                  "AT",
+                  "AU",
+                  "AW",
+                  "AX",
+                  "AZ",
+                  "BA",
+                  "BB",
+                  "BD",
+                  "BE",
+                  "BF",
+                  "BG",
+                  "BH",
+                  "BI",
+                  "BJ",
+                  "BL",
+                  "BM",
+                  "BN",
+                  "BO",
+                  "BQ",
+                  "BR",
+                  "BS",
+                  "BT",
+                  "BV",
+                  "BW",
+                  "BY",
+                  "BZ",
+                  "CA",
+                  "CC",
+                  "CD",
+                  "CF",
+                  "CG",
+                  "CH",
+                  "CI",
+                  "CK",
+                  "CL",
+                  "CM",
+                  "CN",
+                  "CO",
+                  "CR",
+                  "CU",
+                  "CV",
+                  "CW",
+                  "CX",
+                  "CY",
+                  "CZ",
+                  "DE",
+                  "DJ",
+                  "DK",
+                  "DM",
+                  "DO",
+                  "DZ",
+                  "EC",
+                  "EE",
+                  "EG",
+                  "EH",
+                  "ER",
+                  "ES",
+                  "ET",
+                  "FI",
+                  "FJ",
+                  "FK",
+                  "FM",
+                  "FO",
+                  "FR",
+                  "GA",
+                  "GB",
+                  "GD",
+                  "GE",
+                  "GF",
+                  "GG",
+                  "GH",
+                  "GI",
+                  "GL",
+                  "GM",
+                  "GN",
+                  "GP",
+                  "GQ",
+                  "GR",
+                  "GS",
+                  "GT",
+                  "GU",
+                  "GW",
+                  "GY",
+                  "HK",
+                  "HM",
+                  "HN",
+                  "HR",
+                  "HT",
+                  "HU",
+                  "ID",
+                  "IE",
+                  "IL",
+                  "IM",
+                  "IN",
+                  "IO",
+                  "IQ",
+                  "IR",
+                  "IS",
+                  "IT",
+                  "JE",
+                  "JM",
+                  "JO",
+                  "JP",
+                  "KE",
+                  "KG",
+                  "KH",
+                  "KI",
+                  "KM",
+                  "KN",
+                  "KP",
+                  "KR",
+                  "KW",
+                  "KY",
+                  "KZ",
+                  "LA",
+                  "LB",
+                  "LC",
+                  "LI",
+                  "LK",
+                  "LR",
+                  "LS",
+                  "LT",
+                  "LU",
+                  "LV",
+                  "LY",
+                  "MA",
+                  "MC",
+                  "MD",
+                  "ME",
+                  "MF",
+                  "MG",
+                  "MH",
+                  "MK",
+                  "ML",
+                  "MM",
+                  "MN",
+                  "MO",
+                  "MP",
+                  "MQ",
+                  "MR",
+                  "MS",
+                  "MT",
+                  "MU",
+                  "MV",
+                  "MW",
+                  "MX",
+                  "MY",
+                  "MZ",
+                  "NA",
+                  "NC",
+                  "NE",
+                  "NF",
+                  "NG",
+                  "NI",
+                  "NL",
+                  "NO",
+                  "NP",
+                  "NR",
+                  "NU",
+                  "NZ",
+                  "OM",
+                  "PA",
+                  "PE",
+                  "PF",
+                  "PG",
+                  "PH",
+                  "PK",
+                  "PL",
+                  "PM",
+                  "PN",
+                  "PR",
+                  "PS",
+                  "PT",
+                  "PW",
+                  "PY",
+                  "QA",
+                  "RE",
+                  "RO",
+                  "RS",
+                  "RU",
+                  "RW",
+                  "SA",
+                  "SB",
+                  "SC",
+                  "SD",
+                  "SE",
+                  "SG",
+                  "SH",
+                  "SI",
+                  "SJ",
+                  "SK",
+                  "SL",
+                  "SM",
+                  "SN",
+                  "SO",
+                  "SR",
+                  "SS",
+                  "ST",
+                  "SV",
+                  "SX",
+                  "SY",
+                  "SZ",
+                  "TC",
+                  "TD",
+                  "TF",
+                  "TG",
+                  "TH",
+                  "TJ",
+                  "TK",
+                  "TL",
+                  "TM",
+                  "TN",
+                  "TO",
+                  "TR",
+                  "TT",
+                  "TV",
+                  "TW",
+                  "TZ",
+                  "UA",
+                  "UG",
+                  "UM",
+                  "US",
+                  "UY",
+                  "UZ",
+                  "VA",
+                  "VC",
+                  "VE",
+                  "VG",
+                  "VI",
+                  "VN",
+                  "VU",
+                  "WF",
+                  "WS",
+                  "YE",
+                  "YT",
+                  "ZA",
+                  "ZM",
+                  "ZW"
+                ],
+                "example": "CH"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "streetName",
+              "houseNumber",
+              "zip",
+              "city",
+              "country"
+            ]
+          },
+          "isDomicilLocalityCorrespondenceAddress": {
+            "type": "boolean"
+          },
+          "localityCorrespondence": {
+            "description": "Correspondence Address Type",
+            "$schema": "https://json-schema.org/draft/2019-09/schema",
+            "name": "LocalityDomicilType",
+            "type": "object",
+            "properties": {
+              "streetName": {
+                "description": "Street name",
+                "type": "string",
+                "maxLength": 100
+              },
+              "houseNumber": {
+                "description": "House number",
+                "type": "string",
+                "maxLength": 10
+              },
+              "adressExtension": {
+                "description": "Additional address information",
+                "type": "string",
+                "maxLength": 100
+              },
+              "postOfficeBox": {
+                "description": "Post office box",
+                "type": "string",
+                "maxLength": 20
+              },
+              "zip": {
+                "description": "International zip code",
+                "type": "string",
+                "maxLength": 10,
+                "pattern": "[A-Z0-9]{1}[A-Z0-9 ]{0,7}[A-Z0-9]{2}",
+                "example": 8001
+              },
+              "city": {
+                "description": "City",
+                "type": "string",
+                "maxLength": 100
+              },
+              "country": {
+                "$schema": "https://json-schema.org/draft/2019-09/schema",
+                "name": "CountryISOCodeType",
+                "description": "Country codes (ISO 3166-1)",
+                "type": "string",
+                "enum": [
+                  "AD",
+                  "AE",
+                  "AF",
+                  "AG",
+                  "AI",
+                  "AL",
+                  "AM",
+                  "AN",
+                  "AO",
+                  "AQ",
+                  "AR",
+                  "AS",
+                  "AT",
+                  "AU",
+                  "AW",
+                  "AX",
+                  "AZ",
+                  "BA",
+                  "BB",
+                  "BD",
+                  "BE",
+                  "BF",
+                  "BG",
+                  "BH",
+                  "BI",
+                  "BJ",
+                  "BL",
+                  "BM",
+                  "BN",
+                  "BO",
+                  "BQ",
+                  "BR",
+                  "BS",
+                  "BT",
+                  "BV",
+                  "BW",
+                  "BY",
+                  "BZ",
+                  "CA",
+                  "CC",
+                  "CD",
+                  "CF",
+                  "CG",
+                  "CH",
+                  "CI",
+                  "CK",
+                  "CL",
+                  "CM",
+                  "CN",
+                  "CO",
+                  "CR",
+                  "CU",
+                  "CV",
+                  "CW",
+                  "CX",
+                  "CY",
+                  "CZ",
+                  "DE",
+                  "DJ",
+                  "DK",
+                  "DM",
+                  "DO",
+                  "DZ",
+                  "EC",
+                  "EE",
+                  "EG",
+                  "EH",
+                  "ER",
+                  "ES",
+                  "ET",
+                  "FI",
+                  "FJ",
+                  "FK",
+                  "FM",
+                  "FO",
+                  "FR",
+                  "GA",
+                  "GB",
+                  "GD",
+                  "GE",
+                  "GF",
+                  "GG",
+                  "GH",
+                  "GI",
+                  "GL",
+                  "GM",
+                  "GN",
+                  "GP",
+                  "GQ",
+                  "GR",
+                  "GS",
+                  "GT",
+                  "GU",
+                  "GW",
+                  "GY",
+                  "HK",
+                  "HM",
+                  "HN",
+                  "HR",
+                  "HT",
+                  "HU",
+                  "ID",
+                  "IE",
+                  "IL",
+                  "IM",
+                  "IN",
+                  "IO",
+                  "IQ",
+                  "IR",
+                  "IS",
+                  "IT",
+                  "JE",
+                  "JM",
+                  "JO",
+                  "JP",
+                  "KE",
+                  "KG",
+                  "KH",
+                  "KI",
+                  "KM",
+                  "KN",
+                  "KP",
+                  "KR",
+                  "KW",
+                  "KY",
+                  "KZ",
+                  "LA",
+                  "LB",
+                  "LC",
+                  "LI",
+                  "LK",
+                  "LR",
+                  "LS",
+                  "LT",
+                  "LU",
+                  "LV",
+                  "LY",
+                  "MA",
+                  "MC",
+                  "MD",
+                  "ME",
+                  "MF",
+                  "MG",
+                  "MH",
+                  "MK",
+                  "ML",
+                  "MM",
+                  "MN",
+                  "MO",
+                  "MP",
+                  "MQ",
+                  "MR",
+                  "MS",
+                  "MT",
+                  "MU",
+                  "MV",
+                  "MW",
+                  "MX",
+                  "MY",
+                  "MZ",
+                  "NA",
+                  "NC",
+                  "NE",
+                  "NF",
+                  "NG",
+                  "NI",
+                  "NL",
+                  "NO",
+                  "NP",
+                  "NR",
+                  "NU",
+                  "NZ",
+                  "OM",
+                  "PA",
+                  "PE",
+                  "PF",
+                  "PG",
+                  "PH",
+                  "PK",
+                  "PL",
+                  "PM",
+                  "PN",
+                  "PR",
+                  "PS",
+                  "PT",
+                  "PW",
+                  "PY",
+                  "QA",
+                  "RE",
+                  "RO",
+                  "RS",
+                  "RU",
+                  "RW",
+                  "SA",
+                  "SB",
+                  "SC",
+                  "SD",
+                  "SE",
+                  "SG",
+                  "SH",
+                  "SI",
+                  "SJ",
+                  "SK",
+                  "SL",
+                  "SM",
+                  "SN",
+                  "SO",
+                  "SR",
+                  "SS",
+                  "ST",
+                  "SV",
+                  "SX",
+                  "SY",
+                  "SZ",
+                  "TC",
+                  "TD",
+                  "TF",
+                  "TG",
+                  "TH",
+                  "TJ",
+                  "TK",
+                  "TL",
+                  "TM",
+                  "TN",
+                  "TO",
+                  "TR",
+                  "TT",
+                  "TV",
+                  "TW",
+                  "TZ",
+                  "UA",
+                  "UG",
+                  "UM",
+                  "US",
+                  "UY",
+                  "UZ",
+                  "VA",
+                  "VC",
+                  "VE",
+                  "VG",
+                  "VI",
+                  "VN",
+                  "VU",
+                  "WF",
+                  "WS",
+                  "YE",
+                  "YT",
+                  "ZA",
+                  "ZM",
+                  "ZW"
+                ],
+                "example": "CH"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "zip",
+              "city",
+              "country"
+            ]
+          },
+          "GAVcompliance": {
+            "description": "Guaranteed compliance with the GAV-conformity",
+            "$schema": "https://json-schema.org/draft/2019-09/schema",
+            "type": "string",
+            "enum": [
+              "Yes",
+              "No",
+              "Unknown"
+            ]
+          },
+          "GAVname": {
+            "description": "GAV-Designation",
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "description": "GAV-Designation(s)",
+              "type": "string"
+            }
+          },
+          "NOGACodeMain": {
+            "description": "Main NOGA-Code",
+            "$schema": "https://json-schema.org/draft/2019-09/schema",
+            "type": "object",
+            "properties": {
+              "NOGAsection": {
+                "description": "Section the NOGA code belongs to",
+                "type": "string"
+              },
+              "NOGAcode": {
+                "description": "NOGA Code, is a 6 digit string identifier",
+                "type": "string",
+                "maxLength": 6
+              },
+              "NOGAname": {
+                "description": "Corresponding name for the NOGA code",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "NOGACodeAdditional": {
+            "description": "Additional NOGA-Code activities",
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "$schema": "https://json-schema.org/draft/2019-09/schema",
+              "type": "object",
+              "properties": {
+                "NOGAsection": {
+                  "description": "Section the NOGA code belongs to",
+                  "type": "string"
+                },
+                "NOGAcode": {
+                  "description": "NOGA Code, is a 6 digit string identifier",
+                  "type": "string",
+                  "maxLength": 6
+                },
+                "NOGAname": {
+                  "description": "Corresponding name for the NOGA code",
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "companyName",
+          "companyLegalForm",
+          "localityDomicil",
+          "isDomicilLocalityCorrespondenceAddress",
+          "GAVcompliance"
+        ],
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "isDomicilLocalityCorrespondenceAddress": {
+                  "const": false
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "localityCorrespondence"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "GAVcompliance": {
+                  "const": "Yes"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "GAVname"
+              ]
+            }
+          }
+        ]
+      },
+      "unevaluatedItems": false
+    },
+    "agency": {
+      "$schema": "https://json-schema.org/draft/2019-09/schema",
+      "description": "Data type for agency/sales point/commission agent",
+      "name": "AgencyType",
+      "type": "string",
+      "maxLength": 20
+    },
+    "brokerContact": {
+      "$schema": "https://json-schema.org/draft/2019-09/schema",
+      "description": "Contact information details",
+      "name": "ContactType",
+      "type": "object",
+      "properties": {
+        "contactName": {
+          "description": "Name of the contact",
+          "type": "string"
+        },
+        "contactMail": {
+          "description": "E-Mail of the contact",
+          "type": "string"
+        },
+        "contactPhone": {
+          "description": "Phonenumber of the contact",
+          "type": "string"
+        }
+      },
+      "required": [
+        "contactName",
+        "contactMail"
+      ],
+      "additionalProperties": false
+    },
+    "offerRequestType": {
+      "$schema": "https://json-schema.org/draft/2019-09/schema",
+      "description": "Offer type",
+      "type": "string",
+      "enum": [
+        "initial",
+        "update"
+      ]
+    },
+    "offerToDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of offer by which the insurer must submit the offer"
+    },
+    "offerLanguage": {
+      "description": "Language in which the offer must be made out",
+      "$schema": "https://json-schema.org/draft/2019-09/schema",
+      "type": "string",
+      "enum": [
+        "de",
+        "fr",
+        "it",
+        "en"
+      ]
+    },
+    "currency": {
+      "$schema": "https://json-schema.org/draft/2019-09/schema",
+      "description": "international currency codes (ISO 4217)",
+      "name": "CurrencyIsoCodeType",
+      "type": "string",
+      "maxLength": 3,
+      "enum": [
+        "AED",
+        "AFN",
+        "ALL",
+        "AMD",
+        "ANG",
+        "AOA",
+        "ARS",
+        "AUD",
+        "AWG",
+        "AZN",
+        "BAM",
+        "BBD",
+        "BDT",
+        "BGN",
+        "BHD",
+        "BIF",
+        "BND",
+        "BOB",
+        "BOV",
+        "BRL",
+        "BSD",
+        "BTN",
+        "BWP",
+        "BYN",
+        "BZD",
+        "CAD",
+        "CDF",
+        "CHE",
+        "CHF",
+        "CHW",
+        "CLF",
+        "CLP",
+        "CNY",
+        "COP",
+        "COU",
+        "CRC",
+        "CUC",
+        "CUP",
+        "CVE",
+        "CZK",
+        "DJF",
+        "DKK",
+        "DOP",
+        "DZD",
+        "EGP",
+        "ERN",
+        "ETB",
+        "EUR",
+        "FJD",
+        "FKP",
+        "GBP",
+        "GEL",
+        "GHS",
+        "GIP",
+        "GMD",
+        "GNF",
+        "GTQ",
+        "GYD",
+        "HKD",
+        "HNL",
+        "HRK",
+        "HTG",
+        "HUF",
+        "IDR",
+        "ILS",
+        "INR",
+        "IQD",
+        "IRR",
+        "ISK",
+        "JMD",
+        "JOD",
+        "JPY",
+        "KES",
+        "KGS",
+        "KHR",
+        "KMF",
+        "KPW",
+        "KRW",
+        "KWD",
+        "KYD",
+        "KZT",
+        "LAK",
+        "LBP",
+        "LKR",
+        "LRD",
+        "LSL",
+        "LYD",
+        "MAD",
+        "MDL",
+        "MGA",
+        "MKD",
+        "MMK",
+        "MNT",
+        "MOP",
+        "MRO",
+        "MUR",
+        "MVR",
+        "MWK",
+        "MXN",
+        "MXV",
+        "MYR",
+        "MZN",
+        "NAD",
+        "NGN",
+        "NIO",
+        "NOK",
+        "NPR",
+        "NZD",
+        "OMR",
+        "PAB",
+        "PEN",
+        "PGK",
+        "PHP",
+        "PKR",
+        "PLN",
+        "PYG",
+        "QAR",
+        "RON",
+        "RSD",
+        "RUB",
+        "RWF",
+        "SAR",
+        "SBD",
+        "SCR",
+        "SDG",
+        "SEK",
+        "SGD",
+        "SHP",
+        "SLL",
+        "SOS",
+        "SRD",
+        "SSP",
+        "STD",
+        "SVC",
+        "SYP",
+        "SZL",
+        "THB",
+        "TJS",
+        "TMT",
+        "TND",
+        "TOP",
+        "TRY",
+        "TTD",
+        "TWD",
+        "TZS",
+        "UAH",
+        "UGX",
+        "USD",
+        "USN",
+        "UYI",
+        "UYU",
+        "UZS",
+        "VEF",
+        "VND",
+        "VUV",
+        "WST",
+        "XAF",
+        "XCD",
+        "XDR",
+        "XOF",
+        "XPF",
+        "XSU",
+        "XUA",
+        "YER",
+        "ZAR",
+        "ZMW",
+        "ZWL"
+      ],
+      "default": "CHF",
+      "example": "CHF"
+    },
+    "previousInsurer": {
+      "description": "Previous insurer",
+      "$schema": "https://json-schema.org/draft/2019-09/schema",
+      "type": "object",
+      "properties": {
+        "previousInsurer": {
+          "description": "Marker to determine if a previous insurer is known",
+          "$schema": "https://json-schema.org/draft/2019-09/schema",
+          "type": "string",
+          "enum": [
+            "Yes",
+            "No",
+            "Unknown"
+          ]
+        },
+        "previousInsurerDetails": {
+          "description": "Previous insurer details",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "properties": {
+              "insurerCode": {
+                "$schema": "https://json-schema.org/draft/2019-09/schema",
+                "description": "Unique company code for insurer",
+                "type": "string",
+                "maxLength": 5,
+                "pattern": ".*[\\S].*",
+                "example": "15S"
+              },
+              "companyName": {
+                "$schema": "https://json-schema.org/draft/2019-09/schema",
+                "description": "Company name",
+                "name": "CompanyNameType",
+                "type": "string",
+                "maxLength": 255,
+                "example": "MyCompany Name"
+              },
+              "contract": {
+                "description": "Contract",
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "description": "Details of a contract",
+                  "properties": {
+                    "contractNo": {
+                      "type": "string",
+                      "description": "Unique number of the corresponding contract"
+                    },
+                    "insuranceStartDate": {
+                      "$schema": "https://json-schema.org/draft/2019-09/schema",
+                      "description": "Insurance start date",
+                      "type": "string",
+                      "format": "date"
+                    },
+                    "insuranceEndDate": {
+                      "$schema": "https://json-schema.org/draft/2019-09/schema",
+                      "description": "Insurance end date",
+                      "type": "string",
+                      "format": "date"
+                    },
+                    "claimsExperienceDocument": {
+                      "description": "Claims experience document",
+                      "$schema": "https://json-schema.org/draft/2019-09/schema",
+                      "type": "object",
+                      "name": "FileType",
+                      "properties": {
+                        "filename": {
+                          "description": "Name of the file with extension",
+                          "type": "string",
+                          "example": "offer-document.pdf"
+                        },
+                        "data": {
+                          "description": "Base64 encoded content of the attachment",
+                          "type": "string",
+                          "maxLength": 10485760
+                        },
+                        "fingerprint": {
+                          "description": "The base64-encoded MD5 hash value of the file binary",
+                          "type": "string",
+                          "example": "WAHLbX5Pnc0+qYwSonSm/w=="
+                        }
+                      },
+                      "additionalProperties": false,
+                      "required": [
+                        "filename",
+                        "data",
+                        "fingerprint"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "contractNo",
+                    "insuranceStartDate",
+                    "insuranceEndDate",
+                    "claimsExperienceDocument"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "companyName",
+              "contract"
+            ],
+            "additionalProperties": false
+          },
+          "unevaluatedItems": false
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "previousInsurer"
+      ],
+      "if": {
+        "properties": {
+          "previousInsurer": {
+            "const": "Yes"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "previousInsurerDetails"
+        ]
+      }
+    },
+    "insuranceStartDate": {
+      "$schema": "https://json-schema.org/draft/2019-09/schema",
+      "description": "Insurance start date",
+      "type": "string",
+      "format": "date"
+    },
+    "insuranceDurationInYears": {
+      "$schema": "https://json-schema.org/draft/2019-09/schema",
+      "description": "Insurance duration in years",
+      "type": "integer",
+      "maxLength": 2
+    },
+    "DSB": {
+      "$schema": "https://json-schema.org/draft/2019-09/schema",
+      "type": "object",
+      "description": "Daily sickness benefits",
+      "properties": {
+        "persongroups": {
+          "$schema": "https://json-schema.org/draft/2019-09/schema",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "properties": {
+              "persongroupId": {
+                "$schema": "https://json-schema.org/draft/2019-09/schema",
+                "description": "ID of the person group",
+                "type": "string",
+                "format": "uuid",
+                "example": "345aa049-7693-4710-89d7-e13b87ab988a"
+              },
+              "persongroupDescription": {
+                "$schema": "https://json-schema.org/draft/2019-09/schema",
+                "description": "Name of the group of persons",
+                "type": "string"
+              },
+              "DSBPayrollFemale": {
+                "$schema": "https://json-schema.org/draft/2019-09/schema",
+                "description": "Daily sickness benefits salary total for women",
+                "type": "number",
+                "multipleOf": 0.01
+              },
+              "DSBPayrollMale": {
+                "$schema": "https://json-schema.org/draft/2019-09/schema",
+                "description": "Daily sickness benefits salary total for men",
+                "type": "number",
+                "multipleOf": 0.01
+              },
+              "DSBPayrollTotal": {
+                "description": "Total daily sickness benefits salary for men and women",
+                "type": "number",
+                "multipleOf": 0.01
+              },
+              "numberOfPersonsFemale": {
+                "$schema": "https://json-schema.org/draft/2019-09/schema",
+                "description": "Number of women",
+                "type": "integer"
+              },
+              "numberOfPersonsMale": {
+                "$schema": "https://json-schema.org/draft/2019-09/schema",
+                "description": "Number of men",
+                "type": "integer"
+              },
+              "numberOfPersonsTotal": {
+                "description": "Total number of persons",
+                "type": "integer"
+              },
+              "maximumPayrollAmount": {
+                "$schema": "https://json-schema.org/draft/2019-09/schema",
+                "description": "Maximum insured payroll amount",
+                "type": "number",
+                "multipleOf": 0.01
+              },
+              "coverage": {
+                "description": "Daily sickness benefits insurance coverage",
+                "$schema": "https://json-schema.org/draft/2019-09/schema",
+                "type": "object",
+                "properties": {
+                  "DSBCoverage": {
+                    "$schema": "https://json-schema.org/draft/2019-09/schema",
+                    "description": "Daily sickness benefit insurance coverage",
+                    "type": "object",
+                    "properties": {
+                      "DSBDaysWaitingNo": {
+                        "description": "Daily sickness benefits waiting period duration in days",
+                        "type": "integer",
+                        "enum": [
+                          0,
+                          1,
+                          2,
+                          3,
+                          7,
+                          14,
+                          21,
+                          30,
+                          60,
+                          90,
+                          120,
+                          180,
+                          360,
+                          365
+                        ]
+                      },
+                      "DSBCalculationBasis": {
+                        "description": "Daily sickness benefit calculation basis",
+                        "type": "string",
+                        "enum": [
+                          "case",
+                          "working year",
+                          "calendar year",
+                          "cumulativ"
+                        ]
+                      },
+                      "DSBBenefitPeriod": {
+                        "$schema": "https://json-schema.org/draft/2019-09/schema",
+                        "description": "Benefit Period Type",
+                        "name": "BenefitPeriodType",
+                        "type": "object",
+                        "properties": {
+                          "benefitDurationDays": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 9999,
+                            "description": "Duration of benefits in days"
+                          },
+                          "benefitDurationCondition": {
+                            "type": "string",
+                            "description": "Conditions concerning benefits duration",
+                            "enum": [
+                              "minus waiting period",
+                              "after expiry of waiting period",
+                              "within"
+                            ]
+                          },
+                          "periodDays": {
+                            "type": "integer",
+                            "description": "Time period in days",
+                            "minimum": 0,
+                            "maximum": 9999
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      "DSBBenefitAmountPercentage": {
+                        "description": "Daily sickness benefit amount in percentage",
+                        "type": "integer",
+                        "enum": [
+                          10,
+                          15,
+                          20,
+                          25,
+                          30,
+                          35,
+                          40,
+                          45,
+                          50,
+                          55,
+                          60,
+                          65,
+                          70,
+                          75,
+                          80,
+                          85,
+                          87,
+                          90,
+                          92,
+                          95,
+                          97,
+                          100
+                        ]
+                      },
+                      "DSBLegalBasis": {
+                        "description": "Daily sickness benefits legal basis",
+                        "type": "string",
+                        "enum": [
+                          "VVG",
+                          "KVG"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "DSBDaysWaitingNo",
+                      "DSBCalculationBasis",
+                      "DSBBenefitPeriod",
+                      "DSBLegalBasis",
+                      "DSBBenefitAmountPercentage"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "DSBMCoverage": {
+                    "$schema": "https://json-schema.org/draft/2019-09/schema",
+                    "description": "Daily childbirth benefit insurance coverage",
+                    "type": "object",
+                    "properties": {
+                      "DSBMBenefitDurationWeeks": {
+                        "description": "Daily childbirth allowance benefit duration in weeks",
+                        "type": "integer",
+                        "enum": [
+                          14,
+                          15,
+                          16,
+                          20,
+                          21,
+                          28,
+                          35,
+                          42
+                        ]
+                      },
+                      "DSBMBenefitAmountPercentage": {
+                        "description": "Daily childbirth benefit amount in percentage",
+                        "type": "integer",
+                        "enum": [
+                          10,
+                          15,
+                          20,
+                          25,
+                          30,
+                          35,
+                          40,
+                          45,
+                          50,
+                          55,
+                          60,
+                          65,
+                          70,
+                          75,
+                          80,
+                          85,
+                          87,
+                          90,
+                          92,
+                          95,
+                          97,
+                          100
+                        ]
+                      },
+                      "DSBMPayrollBasis": {
+                        "description": "Daily childbirth benefit wage basis",
+                        "$schema": "https://json-schema.org/draft/2019-09/schema",
+                        "type": "string",
+                        "enum": [
+                          "EOG wage",
+                          "EOG surplus wage",
+                          "total wage"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "DSBMBenefitDurationWeeks",
+                      "DSBMBenefitAmountPercentage",
+                      "DSBMPayrollBasis"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "DSBPCoverage": {
+                    "$schema": "https://json-schema.org/draft/2019-09/schema",
+                    "description": "Paternity daily benefit insurance coverage",
+                    "type": "object",
+                    "properties": {
+                      "DSBPBenefitDurationWeeks": {
+                        "description": "Paternity allowance benefit duration in weeks",
+                        "type": "integer",
+                        "enum": [
+                          2,
+                          3,
+                          4,
+                          5,
+                          6,
+                          7,
+                          8,
+                          9,
+                          10,
+                          11,
+                          12,
+                          13,
+                          14,
+                          15,
+                          16,
+                          17,
+                          18,
+                          19,
+                          20
+                        ]
+                      },
+                      "DSBPBenefitAmountPercentage": {
+                        "description": "Paternity daily benefit amount in percentage",
+                        "type": "integer",
+                        "enum": [
+                          80,
+                          90,
+                          100
+                        ]
+                      },
+                      "DSBPPayrollBasis": {
+                        "description": "Paternity daily benefit wage basis",
+                        "$schema": "https://json-schema.org/draft/2019-09/schema",
+                        "type": "string",
+                        "enum": [
+                          "EOG wage",
+                          "EOG surplus wage",
+                          "total wage"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "DSBPBenefitDurationWeeks",
+                      "DSBPBenefitAmountPercentage",
+                      "DSBPPayrollBasis"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "additionalProperties": false
+              },
+              "avarageAgePersongroup": {
+                "description": "Average age of the persongroup, only needed if the total amount of persons in the persongroup is less then or equal to 4",
+                "type": "number",
+                "multipleOf": 0.01
+              },
+              "uniformPremiumRate": {
+                "description": "Unit premium rate i.e. should a distinction be made between men and women in the premium rate.",
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "persongroupId",
+              "persongroupDescription",
+              "DSBPayrollFemale",
+              "DSBPayrollMale",
+              "DSBPayrollTotal",
+              "numberOfPersonsFemale",
+              "numberOfPersonsMale",
+              "numberOfPersonsTotal",
+              "coverage"
+            ]
+          },
+          "description": "Group(s) of persons"
+        },
+        "fixedPayrolls": {
+          "$schema": "https://json-schema.org/draft/2019-09/schema",
+          "description": "Fixed insured payroll",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "properties": {
+              "surname": {
+                "$schema": "https://json-schema.org/draft/2019-09/schema",
+                "description": "Lastname",
+                "type": "string"
+              },
+              "firstname": {
+                "$schema": "https://json-schema.org/draft/2019-09/schema",
+                "description": "Firstname",
+                "type": "string"
+              },
+              "birthDate": {
+                "$schema": "https://json-schema.org/draft/2019-09/schema",
+                "description": "Birthday date",
+                "name": "BirthDateType",
+                "type": "string",
+                "format": "date"
+              },
+              "gender": {
+                "$schema": "https://json-schema.org/draft/2019-09/schema",
+                "title": "GenderType",
+                "description": "Enum of available genders",
+                "type": "string",
+                "enum": [
+                  "female",
+                  "male",
+                  "other",
+                  "unknown"
+                ]
+              },
+              "businessRelationPerson": {
+                "$schema": "https://json-schema.org/draft/2019-09/schema",
+                "description": "The persons business relation type to the company",
+                "type": "string",
+                "enum": [
+                  "BusinessOwner",
+                  "Chief Executive Officer",
+                  "Associate",
+                  "FamilyMembers",
+                  "BusinessPartner",
+                  "Shareholder",
+                  "CooperativeMember",
+                  "Other"
+                ]
+              },
+              "benefitCoverage": {
+                "$schema": "https://json-schema.org/draft/2019-09/schema",
+                "description": "Insured daily benefit coverage",
+                "type": "string",
+                "enum": [
+                  "sickness",
+                  "accident",
+                  "sickness and accident"
+                ]
+              },
+              "insuranceType": {
+                "$schema": "https://json-schema.org/draft/2019-09/schema",
+                "description": "Insurance benefit type",
+                "type": "string",
+                "enum": [
+                  "sum insurance",
+                  "damage insurance"
+                ]
+              },
+              "fixedPayroll": {
+                "$schema": "https://json-schema.org/draft/2019-09/schema",
+                "description": "Fixed payroll amount",
+                "type": "number",
+                "multipleOf": 0.01
+              },
+              "coverage": {
+                "description": "Daily sickness benefits insurance coverage",
+                "$schema": "https://json-schema.org/draft/2019-09/schema",
+                "type": "object",
+                "properties": {
+                  "DSBCoverage": {
+                    "$schema": "https://json-schema.org/draft/2019-09/schema",
+                    "description": "Daily sickness benefit insurance coverage",
+                    "type": "object",
+                    "properties": {
+                      "DSBDaysWaitingNo": {
+                        "description": "Daily sickness benefits waiting period duration in days",
+                        "type": "integer",
+                        "enum": [
+                          0,
+                          1,
+                          2,
+                          3,
+                          7,
+                          14,
+                          21,
+                          30,
+                          60,
+                          90,
+                          120,
+                          180,
+                          360,
+                          365
+                        ]
+                      },
+                      "DSBCalculationBasis": {
+                        "description": "Daily sickness benefit calculation basis",
+                        "type": "string",
+                        "enum": [
+                          "case",
+                          "working year",
+                          "calendar year",
+                          "cumulativ"
+                        ]
+                      },
+                      "DSBBenefitPeriod": {
+                        "$schema": "https://json-schema.org/draft/2019-09/schema",
+                        "description": "Benefit Period Type",
+                        "name": "BenefitPeriodType",
+                        "type": "object",
+                        "properties": {
+                          "benefitDurationDays": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 9999,
+                            "description": "Duration of benefits in days"
+                          },
+                          "benefitDurationCondition": {
+                            "type": "string",
+                            "description": "Conditions concerning benefits duration",
+                            "enum": [
+                              "minus waiting period",
+                              "after expiry of waiting period",
+                              "within"
+                            ]
+                          },
+                          "periodDays": {
+                            "type": "integer",
+                            "description": "Time period in days",
+                            "minimum": 0,
+                            "maximum": 9999
+                          }
+                        },
+                        "additionalProperties": false
+                      },
+                      "DSBBenefitAmountPercentage": {
+                        "description": "Daily sickness benefit amount in percentage",
+                        "type": "integer",
+                        "enum": [
+                          10,
+                          15,
+                          20,
+                          25,
+                          30,
+                          35,
+                          40,
+                          45,
+                          50,
+                          55,
+                          60,
+                          65,
+                          70,
+                          75,
+                          80,
+                          85,
+                          87,
+                          90,
+                          92,
+                          95,
+                          97,
+                          100
+                        ]
+                      },
+                      "DSBLegalBasis": {
+                        "description": "Daily sickness benefits legal basis",
+                        "type": "string",
+                        "enum": [
+                          "VVG",
+                          "KVG"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "DSBDaysWaitingNo",
+                      "DSBCalculationBasis",
+                      "DSBBenefitPeriod",
+                      "DSBLegalBasis",
+                      "DSBBenefitAmountPercentage"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "DSBMCoverage": {
+                    "$schema": "https://json-schema.org/draft/2019-09/schema",
+                    "description": "Daily childbirth benefit insurance coverage",
+                    "type": "object",
+                    "properties": {
+                      "DSBMBenefitDurationWeeks": {
+                        "description": "Daily childbirth allowance benefit duration in weeks",
+                        "type": "integer",
+                        "enum": [
+                          14,
+                          15,
+                          16,
+                          20,
+                          21,
+                          28,
+                          35,
+                          42
+                        ]
+                      },
+                      "DSBMBenefitAmountPercentage": {
+                        "description": "Daily childbirth benefit amount in percentage",
+                        "type": "integer",
+                        "enum": [
+                          10,
+                          15,
+                          20,
+                          25,
+                          30,
+                          35,
+                          40,
+                          45,
+                          50,
+                          55,
+                          60,
+                          65,
+                          70,
+                          75,
+                          80,
+                          85,
+                          87,
+                          90,
+                          92,
+                          95,
+                          97,
+                          100
+                        ]
+                      },
+                      "DSBMPayrollBasis": {
+                        "description": "Daily childbirth benefit wage basis",
+                        "$schema": "https://json-schema.org/draft/2019-09/schema",
+                        "type": "string",
+                        "enum": [
+                          "EOG wage",
+                          "EOG surplus wage",
+                          "total wage"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "DSBMBenefitDurationWeeks",
+                      "DSBMBenefitAmountPercentage",
+                      "DSBMPayrollBasis"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "DSBPCoverage": {
+                    "$schema": "https://json-schema.org/draft/2019-09/schema",
+                    "description": "Paternity daily benefit insurance coverage",
+                    "type": "object",
+                    "properties": {
+                      "DSBPBenefitDurationWeeks": {
+                        "description": "Paternity allowance benefit duration in weeks",
+                        "type": "integer",
+                        "enum": [
+                          2,
+                          3,
+                          4,
+                          5,
+                          6,
+                          7,
+                          8,
+                          9,
+                          10,
+                          11,
+                          12,
+                          13,
+                          14,
+                          15,
+                          16,
+                          17,
+                          18,
+                          19,
+                          20
+                        ]
+                      },
+                      "DSBPBenefitAmountPercentage": {
+                        "description": "Paternity daily benefit amount in percentage",
+                        "type": "integer",
+                        "enum": [
+                          80,
+                          90,
+                          100
+                        ]
+                      },
+                      "DSBPPayrollBasis": {
+                        "description": "Paternity daily benefit wage basis",
+                        "$schema": "https://json-schema.org/draft/2019-09/schema",
+                        "type": "string",
+                        "enum": [
+                          "EOG wage",
+                          "EOG surplus wage",
+                          "total wage"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "DSBPBenefitDurationWeeks",
+                      "DSBPBenefitAmountPercentage",
+                      "DSBPPayrollBasis"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "surname",
+              "firstname",
+              "birthDate",
+              "gender",
+              "benefitCoverage",
+              "insuranceType",
+              "coverage"
+            ]
+          }
+        },
+        "insuranceOptions": {
+          "$schema": "https://json-schema.org/draft/2019-09/schema",
+          "type": "object",
+          "description": "Additional insurance options",
+          "properties": {
+            "insuranceOptionsEmployees": {
+              "$schema": "https://json-schema.org/draft/2019-09/schema",
+              "description": "Insurance options employees",
+              "type": "object",
+              "properties": {
+                "insuranceStartByEmployment": {
+                  "description": "Insurance from the beginning of employment",
+                  "type": "boolean"
+                },
+                "insuranceTemporaryEmployees": {
+                  "description": "Insurance of temporarily employed persons (temporary employment up to 3 months)",
+                  "type": "boolean"
+                },
+                "insuranceParttimeEmployees": {
+                  "description": "Insurance of part-time employees (less than 8 working hours per week)",
+                  "type": "boolean"
+                },
+                "insuranceHourlyEmployees": {
+                  "description": "Insurance of employees on an hourly basis (at least 8 working hours per week)",
+                  "type": "boolean"
+                },
+                "insuranceEmployeesExhaustedBenefitPeriod": {
+                  "description": "Insurance of persons with exhausted benefit period",
+                  "type": "boolean"
+                }
+              },
+              "additionalProperties": false
+            },
+            "insuranceOptionsBenefitScope": {
+              "$schema": "https://json-schema.org/draft/2019-09/schema",
+              "description": "Insurance options scope of benefits",
+              "type": "object",
+              "properties": {
+                "insuranceChildFamilyAllowances": {
+                  "description": "Insurance of child and family allowances",
+                  "type": "boolean"
+                },
+                "insuranceWageIncreaseIncapacity": {
+                  "description": "Insurance agreed wage increases before incapacity for work",
+                  "type": "boolean"
+                },
+                "subsequentPaymentsAfterDeath": {
+                  "description": "Supplementary salary in the event of death in accordance with Art. 338 OR",
+                  "type": "boolean"
+                },
+                "renunciationBenefitReductionsNegligence": {
+                  "description": "Waiver of benefit reductions in the event of gross negligence",
+                  "type": "boolean"
+                },
+                "unpaidLeaveInsurance": {
+                  "description": "Unpaid leave insurance",
+                  "type": "boolean"
+                }
+              },
+              "additionalProperties": false
+            },
+            "insuranceOptionsBenefitPeriod": {
+              "$schema": "https://json-schema.org/draft/2019-09/schema",
+              "description": "Insurance options benefit period",
+              "type": "object",
+              "properties": {
+                "renunciationCreditingWaitingPeriod": {
+                  "description": "Waiver of crediting of the waiting period in the event of continued incapacity for work after UVG rejection of accident causality",
+                  "type": "boolean"
+                },
+                "subsequentBenefitsContractTermination": {
+                  "description": "Entitlement to subsequent payment at end of contract (without vested benefits)",
+                  "type": "boolean"
+                }
+              },
+              "additionalProperties": false
+            },
+            "insuranceOptionsVarious": {
+              "$schema": "https://json-schema.org/draft/2019-09/schema",
+              "description": "Various insurance options",
+              "type": "object",
+              "properties": {
+                "premiumRateGuaranty": {
+                  "$schema": "https://json-schema.org/draft/2019-09/schema",
+                  "description": "Premium rate guarantee during the agreed contract period",
+                  "type": "boolean"
+                },
+                "renunciationTerminationRightClaim": {
+                  "$schema": "https://json-schema.org/draft/2019-09/schema",
+                  "description": "Waiver of the insurer's right to terminate the contract in the event of a claim",
+                  "type": "boolean"
+                },
+                "annualCancellation": {
+                  "$schema": "https://json-schema.org/draft/2019-09/schema",
+                  "description": "Annual right of termination",
+                  "type": "boolean"
+                },
+                "DSBtypePayInstalment": {
+                  "$schema": "https://json-schema.org/draft/2019-09/schema",
+                  "description": "Payment method",
+                  "type": "string",
+                  "enum": [
+                    "1/4 year",
+                    "1/2 year",
+                    "annually"
+                  ]
+                },
+                "additionalOptions": {
+                  "$schema": "https://json-schema.org/draft/2019-09/schema",
+                  "description": "List of additional insurance options, that aren't covered with the offer nlpi DSB structured data definitions.",
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "$schema": "https://json-schema.org/draft/2019-09/schema",
+                    "description": "List of additional options, that aren't covered with the structured data definitions.",
+                    "type": "object",
+                    "properties": {
+                      "optionName": {
+                        "description": "Option name",
+                        "type": "string"
+                      },
+                      "optionValue": {
+                        "description": "Option value",
+                        "type": "string"
+                      },
+                      "optionDescription": {
+                        "description": "Option description",
+                        "type": "string"
+                      }
+                    },
+                    "additionalProperties": false,
+                    "required": [
+                      "optionName",
+                      "optionValue",
+                      "optionDescription"
+                    ]
+                  }
+                },
+                "profitParticipation": {
+                  "$schema": "https://json-schema.org/draft/2019-09/schema",
+                  "description": "Surplus participation",
+                  "type": "boolean"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "profitParticipation"
+              ]
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "persongroups"
+          ]
+        },
+        {
+          "required": [
+            "fixedPayrolls"
+          ]
+        }
+      ],
+      "additionalProperties": false,
+      "unevaluatedProperties": false
+    },
+    "comment": {
+      "$schema": "https://json-schema.org/draft/2019-09/schema",
+      "name": "CommentType",
+      "type": "string",
+      "maxLength": 1000,
+      "description": "General text field with restricted length"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "insuranceStartDate",
+    "previousInsurer",
+    "offerRequestType",
+    "currency",
+    "DSB"
+  ],
+  "unevaluatedProperties": false
+}

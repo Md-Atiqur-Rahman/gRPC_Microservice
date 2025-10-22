@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcGreeter";
+
+package jsonConfig;
+
+// The JsonConfig service definition.
+service JsonConfig {
+  // Sends a Json Config
+  rpc SendJsonConfig (JsonRequest) returns (JsonReply);
+}
+
+// The request message containing the user's name.
+message JsonRequest {
+  string id = 1;
+}
+
+// The response message containing the greetings.
+message JsonReply {
+  string configJson = 1;
+  string payloadJson = 2;
+}

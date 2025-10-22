@@ -1,0 +1,45 @@
+{
+  "processIdentificationNo": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "isShowInPdf": true,
+    "order": 0
+  },
+
+  "header": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "isShowInPdf": true,
+    "order": 2
+  },
+  "header__recipient": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "isShowInPdf": true,
+    "order": 0
+  },
+  "header__recipient__broker": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "isShowInPdf": true,
+    "order": 0
+  },
+  "header__recipient__broker__brokerRegisterNo": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "isShowInPdf": true,
+    "order": 0
+  },
+  "header__recipient__broker__companyId": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "isShowInPdf": false,
+    "order": 1
+  },
+  "header__recipient__broker__companyName": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "isShowInPdf": true,
+    "order": 2
+  }
+}

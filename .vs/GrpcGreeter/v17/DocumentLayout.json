@@ -1,0 +1,241 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\EcoHubEssentials\\RND\\gRPC\\GrpcGreeter\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2DA30220-E0E9-4EE3-94D3-DE77694C3BD9}|GrpcGreeterClient\\GrpcGreeterClient.csproj|e:\\ecohubessentials\\rnd\\grpc\\grpcgreeter\\grpcgreeterclient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DA30220-E0E9-4EE3-94D3-DE77694C3BD9}|GrpcGreeterClient\\GrpcGreeterClient.csproj|solutionrelative:grpcgreeterclient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0112BFA1-AE30-49BE-8685-33D283E6BC9D}|GrpcGreeter\\GrpcGreeter.csproj|e:\\ecohubessentials\\rnd\\grpc\\grpcgreeter\\grpcgreeter\\services\\jsonconfigservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0112BFA1-AE30-49BE-8685-33D283E6BC9D}|GrpcGreeter\\GrpcGreeter.csproj|solutionrelative:grpcgreeter\\services\\jsonconfigservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DA30220-E0E9-4EE3-94D3-DE77694C3BD9}|GrpcGreeterClient\\GrpcGreeterClient.csproj|e:\\ecohubessentials\\rnd\\grpc\\grpcgreeter\\grpcgreeterclient\\protos\\jsonconfig.proto||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{2DA30220-E0E9-4EE3-94D3-DE77694C3BD9}|GrpcGreeterClient\\GrpcGreeterClient.csproj|solutionrelative:grpcgreeterclient\\protos\\jsonconfig.proto||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DA30220-E0E9-4EE3-94D3-DE77694C3BD9}|GrpcGreeterClient\\GrpcGreeterClient.csproj|e:\\ecohubessentials\\rnd\\grpc\\grpcgreeter\\grpcgreeterclient\\protos\\greet.proto||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{2DA30220-E0E9-4EE3-94D3-DE77694C3BD9}|GrpcGreeterClient\\GrpcGreeterClient.csproj|solutionrelative:grpcgreeterclient\\protos\\greet.proto||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0112BFA1-AE30-49BE-8685-33D283E6BC9D}|GrpcGreeter\\GrpcGreeter.csproj|e:\\ecohubessentials\\rnd\\grpc\\grpcgreeter\\grpcgreeter\\protos\\jsonconfig.proto||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{0112BFA1-AE30-49BE-8685-33D283E6BC9D}|GrpcGreeter\\GrpcGreeter.csproj|solutionrelative:grpcgreeter\\protos\\jsonconfig.proto||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0112BFA1-AE30-49BE-8685-33D283E6BC9D}|GrpcGreeter\\GrpcGreeter.csproj|e:\\ecohubessentials\\rnd\\grpc\\grpcgreeter\\grpcgreeter\\protos\\greet.proto||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{0112BFA1-AE30-49BE-8685-33D283E6BC9D}|GrpcGreeter\\GrpcGreeter.csproj|solutionrelative:grpcgreeter\\protos\\greet.proto||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0112BFA1-AE30-49BE-8685-33D283E6BC9D}|GrpcGreeter\\GrpcGreeter.csproj|e:\\ecohubessentials\\rnd\\grpc\\grpcgreeter\\grpcgreeter\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0112BFA1-AE30-49BE-8685-33D283E6BC9D}|GrpcGreeter\\GrpcGreeter.csproj|solutionrelative:grpcgreeter\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0112BFA1-AE30-49BE-8685-33D283E6BC9D}|GrpcGreeter\\GrpcGreeter.csproj|e:\\ecohubessentials\\rnd\\grpc\\grpcgreeter\\grpcgreeter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0112BFA1-AE30-49BE-8685-33D283E6BC9D}|GrpcGreeter\\GrpcGreeter.csproj|solutionrelative:grpcgreeter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0112BFA1-AE30-49BE-8685-33D283E6BC9D}|GrpcGreeter\\GrpcGreeter.csproj|e:\\ecohubessentials\\rnd\\grpc\\grpcgreeter\\grpcgreeter\\services\\greeterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0112BFA1-AE30-49BE-8685-33D283E6BC9D}|GrpcGreeter\\GrpcGreeter.csproj|solutionrelative:grpcgreeter\\services\\greeterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DA30220-E0E9-4EE3-94D3-DE77694C3BD9}|GrpcGreeterClient\\GrpcGreeterClient.csproj|e:\\ecohubessentials\\rnd\\grpc\\grpcgreeter\\grpcgreeterclient\\grpcgreeterclient.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{2DA30220-E0E9-4EE3-94D3-DE77694C3BD9}|GrpcGreeterClient\\GrpcGreeterClient.csproj|solutionrelative:grpcgreeterclient\\grpcgreeterclient.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0112BFA1-AE30-49BE-8685-33D283E6BC9D}|GrpcGreeter\\GrpcGreeter.csproj|e:\\ecohubessentials\\rnd\\grpc\\grpcgreeter\\grpcgreeter\\grpcgreeter.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0112BFA1-AE30-49BE-8685-33D283E6BC9D}|GrpcGreeter\\GrpcGreeter.csproj|solutionrelative:grpcgreeter\\grpcgreeter.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0112BFA1-AE30-49BE-8685-33D283E6BC9D}|GrpcGreeter\\GrpcGreeter.csproj|e:\\ecohubessentials\\rnd\\grpc\\grpcgreeter\\grpcgreeter\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0112BFA1-AE30-49BE-8685-33D283E6BC9D}|GrpcGreeter\\GrpcGreeter.csproj|solutionrelative:grpcgreeter\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0112BFA1-AE30-49BE-8685-33D283E6BC9D}|GrpcGreeter\\GrpcGreeter.csproj|e:\\ecohubessentials\\rnd\\grpc\\grpcgreeter\\grpcgreeter\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0112BFA1-AE30-49BE-8685-33D283E6BC9D}|GrpcGreeter\\GrpcGreeter.csproj|solutionrelative:grpcgreeter\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "JsonConfigService.cs",
+              "DocumentMoniker": "E:\\EcoHubEssentials\\RND\\gRPC\\GrpcGreeter\\GrpcGreeter\\Services\\JsonConfigService.cs",
+              "RelativeDocumentMoniker": "GrpcGreeter\\Services\\JsonConfigService.cs",
+              "ToolTip": "E:\\EcoHubEssentials\\RND\\gRPC\\GrpcGreeter\\GrpcGreeter\\Services\\JsonConfigService.cs",
+              "RelativeToolTip": "GrpcGreeter\\Services\\JsonConfigService.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAIBAwBIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T11:52:18.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "jsonConfig.proto",
+              "DocumentMoniker": "E:\\EcoHubEssentials\\RND\\gRPC\\GrpcGreeter\\GrpcGreeterClient\\Protos\\jsonConfig.proto",
+              "RelativeDocumentMoniker": "GrpcGreeterClient\\Protos\\jsonConfig.proto",
+              "ToolTip": "E:\\EcoHubEssentials\\RND\\gRPC\\GrpcGreeter\\GrpcGreeterClient\\Protos\\jsonConfig.proto",
+              "RelativeToolTip": "GrpcGreeterClient\\Protos\\jsonConfig.proto",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003853|",
+              "WhenOpened": "2025-10-22T11:00:46.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GrpcGreeter",
+              "DocumentMoniker": "E:\\EcoHubEssentials\\RND\\gRPC\\GrpcGreeter\\GrpcGreeter\\GrpcGreeter.csproj",
+              "RelativeDocumentMoniker": "GrpcGreeter\\GrpcGreeter.csproj",
+              "ToolTip": "E:\\EcoHubEssentials\\RND\\gRPC\\GrpcGreeter\\GrpcGreeter\\GrpcGreeter.csproj",
+              "RelativeToolTip": "GrpcGreeter\\GrpcGreeter.csproj",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-22T10:36:24.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "jsonConfig.proto",
+              "DocumentMoniker": "E:\\EcoHubEssentials\\RND\\gRPC\\GrpcGreeter\\GrpcGreeter\\Protos\\jsonConfig.proto",
+              "RelativeDocumentMoniker": "GrpcGreeter\\Protos\\jsonConfig.proto",
+              "ToolTip": "E:\\EcoHubEssentials\\RND\\gRPC\\GrpcGreeter\\GrpcGreeter\\Protos\\jsonConfig.proto",
+              "RelativeToolTip": "GrpcGreeter\\Protos\\jsonConfig.proto",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003853|",
+              "WhenOpened": "2025-10-22T10:32:39.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "E:\\EcoHubEssentials\\RND\\gRPC\\GrpcGreeter\\GrpcGreeter\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "GrpcGreeter\\appsettings.Development.json",
+              "ToolTip": "E:\\EcoHubEssentials\\RND\\gRPC\\GrpcGreeter\\GrpcGreeter\\appsettings.Development.json",
+              "RelativeToolTip": "GrpcGreeter\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-22T08:42:18.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "E:\\EcoHubEssentials\\RND\\gRPC\\GrpcGreeter\\GrpcGreeter\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "GrpcGreeter\\Properties\\launchSettings.json",
+              "ToolTip": "E:\\EcoHubEssentials\\RND\\gRPC\\GrpcGreeter\\GrpcGreeter\\Properties\\launchSettings.json",
+              "RelativeToolTip": "GrpcGreeter\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-22T08:40:12.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GrpcGreeterClient",
+              "DocumentMoniker": "E:\\EcoHubEssentials\\RND\\gRPC\\GrpcGreeter\\GrpcGreeterClient\\GrpcGreeterClient.csproj",
+              "RelativeDocumentMoniker": "GrpcGreeterClient\\GrpcGreeterClient.csproj",
+              "ToolTip": "E:\\EcoHubEssentials\\RND\\gRPC\\GrpcGreeter\\GrpcGreeterClient\\GrpcGreeterClient.csproj",
+              "RelativeToolTip": "GrpcGreeterClient\\GrpcGreeterClient.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-22T08:35:51.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "greet.proto",
+              "DocumentMoniker": "E:\\EcoHubEssentials\\RND\\gRPC\\GrpcGreeter\\GrpcGreeterClient\\Protos\\greet.proto",
+              "RelativeDocumentMoniker": "GrpcGreeterClient\\Protos\\greet.proto",
+              "ToolTip": "E:\\EcoHubEssentials\\RND\\gRPC\\GrpcGreeter\\GrpcGreeterClient\\Protos\\greet.proto",
+              "RelativeToolTip": "GrpcGreeterClient\\Protos\\greet.proto",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003853|",
+              "WhenOpened": "2025-10-22T08:35:20.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\EcoHubEssentials\\RND\\gRPC\\GrpcGreeter\\GrpcGreeterClient\\Program.cs",
+              "RelativeDocumentMoniker": "GrpcGreeterClient\\Program.cs",
+              "ToolTip": "E:\\EcoHubEssentials\\RND\\gRPC\\GrpcGreeter\\GrpcGreeterClient\\Program.cs",
+              "RelativeToolTip": "GrpcGreeterClient\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T08:31:56.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\EcoHubEssentials\\RND\\gRPC\\GrpcGreeter\\GrpcGreeter\\Program.cs",
+              "RelativeDocumentMoniker": "GrpcGreeter\\Program.cs",
+              "ToolTip": "E:\\EcoHubEssentials\\RND\\gRPC\\GrpcGreeter\\GrpcGreeter\\Program.cs",
+              "RelativeToolTip": "GrpcGreeter\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T08:30:44.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\EcoHubEssentials\\RND\\gRPC\\GrpcGreeter\\GrpcGreeter\\appsettings.json",
+              "RelativeDocumentMoniker": "GrpcGreeter\\appsettings.json",
+              "ToolTip": "E:\\EcoHubEssentials\\RND\\gRPC\\GrpcGreeter\\GrpcGreeter\\appsettings.json",
+              "RelativeToolTip": "GrpcGreeter\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-22T08:30:34.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GreeterService.cs",
+              "DocumentMoniker": "E:\\EcoHubEssentials\\RND\\gRPC\\GrpcGreeter\\GrpcGreeter\\Services\\GreeterService.cs",
+              "RelativeDocumentMoniker": "GrpcGreeter\\Services\\GreeterService.cs",
+              "ToolTip": "E:\\EcoHubEssentials\\RND\\gRPC\\GrpcGreeter\\GrpcGreeter\\Services\\GreeterService.cs",
+              "RelativeToolTip": "GrpcGreeter\\Services\\GreeterService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T08:30:15.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "greet.proto",
+              "DocumentMoniker": "E:\\EcoHubEssentials\\RND\\gRPC\\GrpcGreeter\\GrpcGreeter\\Protos\\greet.proto",
+              "RelativeDocumentMoniker": "GrpcGreeter\\Protos\\greet.proto",
+              "ToolTip": "E:\\EcoHubEssentials\\RND\\gRPC\\GrpcGreeter\\GrpcGreeter\\Protos\\greet.proto",
+              "RelativeToolTip": "GrpcGreeter\\Protos\\greet.proto",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003853|",
+              "WhenOpened": "2025-10-22T08:29:37.379Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

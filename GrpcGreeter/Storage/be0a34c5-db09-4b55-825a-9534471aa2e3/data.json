@@ -1,0 +1,12 @@
+{
+  "processIdentificationNo": "000000001",
+  "header": {
+    "recipient": {
+      "broker": {
+        "brokerRegisterNo": "CHE-123456",
+        "companyId": "UID-14785",
+        "companyName": "Selise"
+      }
+    }
+  }
+}

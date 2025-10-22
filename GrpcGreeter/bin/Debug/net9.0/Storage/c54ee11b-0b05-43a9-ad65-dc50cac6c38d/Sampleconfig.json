@@ -1,0 +1,17 @@
+{
+  "firstName": {
+    "autoPopulate": true,
+    "autoPopulateField": "customerPhone",
+    "pdfSettings": {
+      "isShowInPdf": true,
+      "size": "12pt"
+    },
+    "order": 0
+  },
+  
+  "gender": {
+    "autoPopulate": false,
+    "autoPopulateField": "customerPhone",
+    "order": 9
+  }
+}

@@ -1,0 +1,362 @@
+{
+  "processIdentificationNo": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 0
+  },
+  "timestamp": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 1
+  },
+  "header": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 2
+  },
+  "header__recipient": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 0
+  },
+  "header__recipient__broker": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 0
+  },
+  "header__recipient__broker__brokerRegisterNo": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 0
+  },
+  "header__recipient__broker__companyId": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 1
+  },
+  "header__recipient__broker__companyName": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 2
+  },
+  "header__recipient__insurer": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 1
+  },
+  "header__recipient__insurer__companyId": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 0
+  },
+  "header__recipient__insurer__companyName": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 1
+  },
+  "header__recipient__insurer__insurerCode": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 2
+  },
+  "header__recipient__otherExchangePartner": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 2
+  },
+  "header__recipient__otherExchangePartner__companyId": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 0
+  },
+  "header__recipient__otherExchangePartner__companyName": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 1
+  },
+  "header__recipient__otherExchangePartner__digitalPartnerId": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 2
+  },
+  "formly_388_multischema__3": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 3
+  },
+  "header__sender": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 1
+  },
+  "header__sender__broker": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 0
+  },
+  "header__sender__broker__brokerRegisterNo": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 0
+  },
+  "header__sender__broker__companyId": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 1
+  },
+  "header__sender__broker__companyName": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 2
+  },
+  "header__sender__insurer": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 1
+  },
+  "header__sender__insurer__companyId": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 0
+  },
+  "header__sender__insurer__companyName": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 1
+  },
+  "header__sender__insurer__insurerCode": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 2
+  },
+  "header__sender__otherExchangePartner": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 2
+  },
+  "header__sender__otherExchangePartner__companyId": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 0
+  },
+  "header__sender__otherExchangePartner__companyName": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 1
+  },
+  "header__sender__otherExchangePartner__digitalPartnerId": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 2
+  },
+  "formly_406_multischema__3": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 3
+  },
+  "header__standard": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 2
+  },
+  "customer": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 3
+  },
+  "customer__companyName": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 0
+  },
+  "customer__companyId": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 1
+  },
+  "customer__companyLegalForm": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 2
+  },
+  "customer__companyLegalStatus": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 3
+  },
+  "customer__localityDomicil": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 4
+  },
+  "customer__localityDomicil__streetName": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 0
+  },
+  "customer__localityDomicil__houseNumber": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 1
+  },
+  "customer__localityDomicil__adressExtension": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 2
+  },
+  "customer__localityDomicil__postOfficeBox": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 3
+  },
+  "customer__localityDomicil__zip": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 4
+  },
+  "customer__localityDomicil__city": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 5
+  },
+  "customer__localityDomicil__country": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 6
+  },
+  "customer__isDomicilLocalityCorrespondenceAddress": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 5
+  },
+  "customer__localityCorrespondence": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 6
+  },
+  "customer__localityCorrespondence__streetName": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 0
+  },
+  "customer__localityCorrespondence__houseNumber": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 1
+  },
+  "customer__localityCorrespondence__adressExtension": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 2
+  },
+  "customer__localityCorrespondence__postOfficeBox": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 3
+  },
+  "customer__localityCorrespondence__zip": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 4
+  },
+  "customer__localityCorrespondence__city": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 5
+  },
+  "customer__localityCorrespondence__country": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 6
+  },
+  "quotationNo": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 4
+  },
+  "offerDecision": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 5
+  },
+  "offerDecision__offerAcceptance": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 0
+  },
+  "offerDecision__offerAcceptance__offerDocument": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 0
+  },
+  "offerDecision__offerAcceptance__offerDocument__digitalSignedOffer": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 0
+  },
+  "offerDecision__offerAcceptance__offerDocument__digitalSignedDocument": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 1
+  },
+  "offerDecision__offerAcceptance__offerDocument__physicalSignedDocument": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 2
+  },
+  "offerDecision__offerAcceptance__offerAttachmentDocument": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 1
+  },
+  "offerDecision__offerAcceptance__offerAttachmentDocument__digitalSignedDocument": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 0
+  },
+  "offerDecision__offerAcceptance__offerAttachmentDocument__physicalSignedDocument": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 1
+  },
+  "offerDecision__offerAcceptance__offerAttachmentDocument__otherAttachments": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 2
+  },
+  "offerDecision__offerRejection": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 2
+  },
+  "offerDecision__offerRejection__offerRejectionReason": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 0
+  },
+  "offerFeedbackMessage": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 6
+  },
+  "brokerContact": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 7
+  },
+  "brokerContact__contactName": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 0
+  },
+  "brokerContact__contactMail": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 1
+  },
+  "brokerContact__contactPhone": {
+    "autoPopulate": false,
+    "autoPopulateField": "",
+    "order": 2
+  }
+}

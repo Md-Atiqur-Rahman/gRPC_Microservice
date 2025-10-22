@@ -1,0 +1,17 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "description": "Offer rejection",
+    "type": "object",
+    "properties": {
+        "offerRejectionReason": {
+            "description": "Reason for rejection of offer",
+            "type": "string",
+            "nullable": false
+        }
+    },
+    "required": [
+        "offerRejectionReason"
+    ],
+    "additionalProperties": false,
+    "nullable": true
+}
